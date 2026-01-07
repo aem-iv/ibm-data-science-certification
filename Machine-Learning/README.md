@@ -1,1 +1,38 @@
-# AUS Weather Classification**Author:** aem-iv  **Date:** January 2026  ## OverviewThis project predicts whether it will rain **today** using Australian weather data.It applies preprocessing pipelines and compares a Random Forest classifier withLogistic Regression.## DatasetData source:- `weatherAUS-2.csv` (loaded directly via URL)Locations used:- Melbourne- MelbourneAirport- Watsonia## Methodology- Removed missing values- Feature engineering: Date → Season- Stratified train/test split- Preprocessing with scaling and one-hot encoding- Model tuning with GridSearchCV## Models- Random Forest Classifier- Logistic Regression (L1 / L2 regularization)## How to Run```bashpip install -r requirements.txtpython aus_weather_classification.py## NotesThe primary goal is detecting rain events. Accuracy alone is insufficient due toclass imbalance; recall and F1-score should also be considered.
+# AUS Weather Classification
+
+**Author:** aem-iv  
+**Date:** January 2026  
+
+## Overview
+This project predicts whether it will rain **today** using Australian weather data.
+It applies preprocessing pipelines and compares a Random Forest classifier with
+Logistic Regression.
+
+## Dataset
+Data source:
+- `weatherAUS-2.csv` (loaded directly via URL)
+
+Locations used:
+- Melbourne
+- MelbourneAirport
+- Watsonia
+
+## Methodology
+- Removed missing values
+- Feature engineering: Date → Season
+- Stratified train/test split
+- Preprocessing with scaling and one-hot encoding
+- Model tuning with GridSearchCV
+
+## Models
+- Random Forest Classifier
+- Logistic Regression (L1 / L2 regularization)
+
+## How to Run
+```bash
+pip install -r requirements.txt
+python aus_weather_classification.py
+```
+## Notes
+The primary goal is detecting rain events. Accuracy alone is insufficient due to
+class imbalance; recall and F1-score should also be considered.
